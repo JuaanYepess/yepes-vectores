@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #define MAX 100
 
 int main(int argc, char const *argv[]) {
@@ -13,17 +14,14 @@ int main(int argc, char const *argv[]) {
         return 1;
     }
 
-    printf("Ingrese los elementos del vector:\n");
     for (int i = 0; i < tamanio; i++) {
-        printf("Elemento %d: ", i + 1);
-        scanf("%d", &Yepes[i]);
+        Yepes[i] = rand() % 100;
     }
 
-    printf("\nContenido del vector:\n");
+    printf("Contenido del vector:\n");
     for (int i = 0; i < tamanio; i++) {
         printf("%d ", Yepes[i]);
     }
 
-    printf("\n");
     return 0;
 }
