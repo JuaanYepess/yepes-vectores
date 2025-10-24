@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #define MAX 100
 
+void yepes(int v[], int n) {
+    for (int i = 0; i < n; i++) {
+        v[i] = rand() % 100;
+    }
+}
+
 int main(int argc, char const *argv[]) {
     int tamanio;
     int Yepes[MAX];
@@ -14,9 +20,7 @@ int main(int argc, char const *argv[]) {
         return 1;
     }
 
-    for (int i = 0; i < tamanio; i++) {
-        Yepes[i] = rand() % 100;
-    }
+    yepes(Yepes, tamanio);
 
     printf("Contenido del vector:\n");
     for (int i = 0; i < tamanio; i++) {
